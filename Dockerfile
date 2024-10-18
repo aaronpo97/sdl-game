@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 
 RUN mkdir -p embuild && cd embuild && \
-    emcmake cmake -DBUILD_SHARED_LIBS=OFF .. && \
+    emcmake cmake .. && \
     cmake --build .
 
 RUN npm install -g serve

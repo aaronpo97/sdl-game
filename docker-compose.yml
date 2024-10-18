@@ -1,9 +1,10 @@
-version: '3.8'
-
+version: '3'
 services:
   sdl_game:
-    container_name: sdl_game
-    image: sdl_game
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms: 
+        - linux/arm64
     ports:
       - "3333:3333"
